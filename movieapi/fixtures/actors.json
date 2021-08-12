@@ -1,0 +1,42 @@
+[
+    {
+        "model": "movieapi.actor",
+        "pk": 1,
+        "fields": {
+            "first_name": "Brad",
+            "last_name": "Pitt"
+        }
+    },
+    {
+        "model": "movieapi.actor",
+        "pk": 2,
+        "fields": {
+            "first_name": "Matt",
+            "last_name": "Damon"
+        }
+    },
+    {
+        "model": "movieapi.actor",
+        "pk": 3,
+        "fields": {
+            "first_name": "Zooey",
+            "last_name": "Deschanel"
+        }
+    },
+    {
+        "model": "movieapi.actor",
+        "pk": 4,
+        "fields": {
+            "first_name": "Will",
+            "last_name": "Smith"
+        }
+    },
+    {
+        "model": "movieapi.actor",
+        "pk": 5,
+        "fields": {
+            "first_name": "Tom",
+            "last_name": "Cruise"
+        }
+    }
+]
