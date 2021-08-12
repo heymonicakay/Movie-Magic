@@ -2,12 +2,27 @@
 from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
-from rest_framework import serializers
+from rest_framework import serializers, status
 from movieapi.models import Director
 
 
 class DirectorView(ViewSet):
     """Movie Server directors"""
+
+    def destroy(self, request, pk=None):
+        """
+        [summary]
+
+        Args:
+            request ([type]): [description]
+            pk ([type], optional): [description]. Defaults to None.
+        """
+        try:
+            genre = Director.objects.get(pk=pk)
+            genre.delete()
+            return Response({}, status=status.HTTP_204_NO_CONTENT)
+        except Director.DoesNotExist as ex:
+            return Response({'message': ex.args[0]})
 
     def retrieve(self, request, pk=None):
         """Handle GET requests for single director
